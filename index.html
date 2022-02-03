@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Hangman</title>
+</head>
+<body>
+    <h1>Vesalice</h1>
+    <p>Pritisni neko slovo</p>
+    <div class="game-container">
+        <svg width="200" height="250" class="figure-container">
+            <!--ROD-->
+            <line x1="60" y1="20" x2="140" y2="20"/>
+            <line x1="60" y1="20" x2="60" y2="200"/>
+            <line x1="140" y1="20" x2="140" y2="50"/>
+            <line x1="20" y1="200" x2="100" y2="200"/>
+            <!-- HEAD -->
+
+            <circle cx="140" cy="70" r="20" class="figure-part"/>
+            <!-- BODY -->
+            <line x1="140" y1="90" x2="140" y2="150" class="figure-part" />
+            <!-- ARMS-->
+            <line x1="140" y1="120" x2="170" y2="90" class="figure-part" />
+            <line x1="140" y1="120" x2="110" y2="90" class="figure-part" />
+            <!-- LESG-->>
+            <line x1="140" y1="150" x2="110" y2="170" class="figure-part" />
+            <line x1="140" y1="150" x2="170" y2="170" class="figure-part" />
+
+        </svg>
+        <div class="wrong-letters-container">
+            <div id="wrong-letters">
+            </div>
+        </div>
+
+        <div class="word" id="word">
+
+        </div>
+    </div>
+<!--CONTAINER FOR FINAL MESSAGE-->
+    <div class="popup-container" id="popup-container">
+        <div class="popup">
+            <h2 id="final-messsage"></h2>
+            <button onclick="reset()" id="play-button">Play Again</button>
+        </div>
+    </div>
+<!--NOTIFICATION-->
+<div class="notification-container" id="notification-container">
+    <p>You have already entered this letter!</p>
+
+</div>
+<script src="./script.js"></script>
+</body>
+</html>
